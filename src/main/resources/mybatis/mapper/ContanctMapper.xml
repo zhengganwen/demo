@@ -3,6 +3,10 @@
 <mapper namespace="com.study.demo.mapper.ContactMapper">
   <sql id="column"> id,userid,uname,uphone,relation,intime</sql>
 
+  <resultMap id="BaseResultMap" type="com.study.demo.domain.Contact">
+    <result column="id" jdbcType="VARCHAR" property="id"/>
+  </resultMap>
+
   <select id="findAll"   resultType="com.study.demo.domain.Contact" >
 
     SELECT  <include refid="column"/>
