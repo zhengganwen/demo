@@ -6,10 +6,13 @@
 <generatorConfiguration>
     <context id="testTables" targetRuntime="MyBatis3">
 
-        <commentGenerator>
-            <!-- 是否去除自动生成的注释 true：是 ： false:否 -->
+        <property name="javaFileEncoding" value="UTF-8"/>
+        <commentGenerator type="com.study.demo.untils.MyCommentGenerator"></commentGenerator>
+
+        <!--<commentGenerator>
+            &lt;!&ndash; 是否去除自动生成的注释 true：是 ： false:否 &ndash;&gt;
             <property name="suppressAllComments" value="true" />
-        </commentGenerator>
+        </commentGenerator>-->
 
         <!--数据库连接的信息：驱动类、连接地址、用户名、密码 -->
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
@@ -51,10 +54,10 @@
 
 
         <!-- 指定数据库表 -->
-      <!--  <table schema="loan" tableName="user" domainObjectName="User"></table>   -->
+        <table schema="loan" tableName="user" domainObjectName="User"></table>
 
 
-        <table schema="loan" tableName="tcode" domainObjectName="Code"></table>
+        <!--  <table schema="loan" tableName="tcode" domainObjectName="Code"></table>  -->
 
-    </context>
-</generatorConfiguration>
+      </context>
+  </generatorConfiguration>
